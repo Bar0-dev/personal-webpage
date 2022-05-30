@@ -1,0 +1,33 @@
+.buttonNav {
+  font-size: 1.3rem;
+  font-weight: 300;
+  //   text-transform: uppercase;
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 0.2rem;
+  background: #ff00cc; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #b4b4ff,
+    #9e83e7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #b4b4ff,
+    #9e83e7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-box-shadow: 5px 11px 31px -4px rgb(0, 3, 26);
+  -moz-box-shadow: 5px 11px 31px -4px rgb(0, 3, 26);
+  box-shadow: 3px 6px 15px -10px rgb(0, 3, 26);
+  background-size: 200% 200%;
+  transition: all 0.3s ease-in-out;
+  backface-visibility: hidden;
+
+  cursor: pointer;
+  &:hover {
+    background-position: 90% 0%;
+    transform: scale(1.02);
+    box-shadow: 3px 6px 15px -7px rgb(0, 3, 26),
+      0px 0px 15px -5px rgb(190, 198, 255);
+  }
+}
