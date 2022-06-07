@@ -1,14 +1,10 @@
 import styles from "./typography.module.scss";
+import {FC} from 'react'
 
-export default function Typography(props) {
-  const variant = props.variant ?? "h1";
+interface TypographyProps {
+  component: string;
+}
 
-  switch (variant) {
-    case "h1":
-      return <h1>{props.children}</h1>;
-
-    case "h2":
-      return <h2>{props.children}</h2>;
-    case "h3":
-  }
+const Typography:react.FunctionalComponent<TypographyProps> = ({component: Wrapper=<div>, children, ...rest}) => {
+  return <Wrapper className={styles.header} {...rest}>{children}</Wrapper>
 }
