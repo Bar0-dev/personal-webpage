@@ -1,10 +1,16 @@
 import styles from "./typography.module.scss";
-import {FC} from 'react'
+import React from "react";
 
 interface TypographyProps {
-  component: string;
+  tag: JSX.IntrinsicElements;
 }
 
-const Typography:react.FunctionalComponent<TypographyProps> = ({component: Wrapper=<div>, children, ...rest}) => {
-  return <Wrapper className={styles.header} {...rest}>{children}</Wrapper>
-}
+const Typography: React.FC<
+  TypographyProps & React.HTMLAttributes<HTMLOrSVGElement>
+> = ({ tag: Wrapper = <div></div>, ...rest }) => {
+  return (
+    <Wrapper className={styles.header} {...rest}>
+      {children}
+    </Wrapper>
+  );
+};
