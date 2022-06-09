@@ -1,9 +1,10 @@
 import Container from "../../CommonComponents/Container/Container";
+import Typography from "../../CommonComponents/Typography/Typography";
 
 export default function Projects(props) {
   return (
     <Container>
-      <h2>Personal projects</h2>
+      <Typography variant="h1">Personal Projects</Typography>
     </Container>
   );
 }

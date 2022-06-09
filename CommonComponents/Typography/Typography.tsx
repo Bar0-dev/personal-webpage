@@ -1,16 +1,22 @@
 import styles from "./typography.module.scss";
-import React from "react";
+import { ElementType, HTMLAttributes, FC } from "react";
 
-interface TypographyProps {
-  tag: JSX.IntrinsicElements;
+interface TypographyProps extends HTMLAttributes<HTMLOrSVGElement> {
+  tag?: ElementType;
+  variant?: string;
 }
 
-const Typography: React.FC<
-  TypographyProps & React.HTMLAttributes<HTMLOrSVGElement>
-> = ({ tag: Wrapper = <div></div>, ...rest }) => {
+const Typography: FC<TypographyProps> = ({
+  variant = "div",
+  tag: Tag = variant,
+  children,
+  ...rest
+}) => {
   return (
-    <Wrapper className={styles.header} {...rest}>
+    <Tag className={styles[variant]} {...rest}>
       {children}
-    </Wrapper>
+    </Tag>
   );
 };
+
+export default Typography;
