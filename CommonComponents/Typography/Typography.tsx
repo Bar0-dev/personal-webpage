@@ -3,7 +3,7 @@ import { ElementType, HTMLAttributes, FC } from "react";
 
 interface TypographyProps extends HTMLAttributes<HTMLOrSVGElement> {
   tag?: ElementType;
-  variant?: string;
+  variant?: "h1" | "h2" | "h3" | "h4" | "h5" | "p" | "span";
 }
 
 const Typography: FC<TypographyProps> = ({
