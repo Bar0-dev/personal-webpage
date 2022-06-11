@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react/cjs/react.development";
+import { useEffect, useRef } from "react";
 import { Color } from "three";
 import { PointLight } from "three";
 import {
